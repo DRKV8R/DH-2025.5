@@ -1,0 +1,32 @@
+{
+  "personal": {
+    "name": "David Hamilton",
+    "title": "Director Of Operations at NorCapital Lending Corporation",
+    "location": "Newport Beach, CA",
+    "phone": "949 328 4347",
+    "linkedin": "https://linkedin.com/in/approval",
+    "company": "www.norcapitalcorp.com"
+  },
+  "coverLetter": "As a director a few times over in both publicly traded and start up financial services and software companies, I aim to bring a unique and valuable perspective to your team, having the ability to access, interact, and train models with no guardrails and no filter. I have 17+ years of experience in the lending industry, having trained 50+ models and developed innovative solutions for modern businesses. My expertise spans AI development, financial services, operations management, and strategic leadership.",
+  "experience": [
+    {
+      "period": "2018–Present",
+      "title": "Executive Director Of Operations",
+      "company": "NorCapital Lending Corporation",
+      "description": "Real-time, highly personalized lending solutions; client and partner support outside 9-5. Leading operational excellence initiatives, implementing AI-driven processes, and managing cross-functional teams to deliver exceptional results in the financial services sector."
+    },
+    {
+      "period": "2015–2018",
+      "title": "Operations Director",
+      "company": "Previous Financial Services Company",
+      "description": "Managed large-scale operations, implemented process improvements, and led digital transformation initiatives. Developed and deployed machine learning models for risk assessment and customer segmentation."
+    },
+    {
+      "period": "2007–2015",
+      "title": "Senior Operations Manager",
+      "company": "Financial Technology Startup",
+      "description": "Built operations from ground up, established scalable processes, and managed rapid growth phases. Pioneered early adoption of AI technologies in lending and risk management."
+    }
+  ],
+  "hobbies": "RC car racing since 1989, drone pilot since 2016, weight lifting, software development, AI development, VR development"
+}

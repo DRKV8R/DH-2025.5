@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Force Dark Mode Resistance - Complete Browser Override Protection */
+  html,
+  body,
+  *,
+  *::before,
+  *::after {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+  }
+
+  /* Force color scheme override */
+  :root {
+    color-scheme: only light !important;
+  }
+
+  /* Media query protection for all color scheme preferences */
+  @media (prefers-color-scheme: dark), (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+    html,
+    body,
+    .main-container,
+    .cv-modal,
+    .chat-footer,
+    input,
+    textarea,
+    button,
+    div,
+    span,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      background: #000000 !important;
+      color: #ffffff !important;
+    }
+  }
+
+  /* Base styles with Geist fonts and performance optimizations */
+  body {
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+      "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background: #000000 !important;
+    color: #ffffff !important;
+    overflow-x: hidden;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Enhanced font family utilities with proper fallbacks */
+  .font-sans {
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+      "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+  }
+
+  .font-mono {
+    font-family: var(--font-geist-mono), "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro", monospace;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+  }
+
+  /* Geist font weight utilities */
+  .font-geist-thin {
+    font-weight: 100;
+  }
+  .font-geist-extralight {
+    font-weight: 200;
+  }
+  .font-geist-light {
+    font-weight: 300;
+  }
+  .font-geist-normal {
+    font-weight: 400;
+  }
+  .font-geist-medium {
+    font-weight: 500;
+  }
+  .font-geist-semibold {
+    font-weight: 600;
+  }
+  .font-geist-bold {
+    font-weight: 700;
+  }
+  .font-geist-extrabold {
+    font-weight: 800;
+  }
+  .font-geist-black {
+    font-weight: 900;
+  }
+
+  /* Performance-optimized animations */
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes pulse-red {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-pulse-red {
+    animation: pulse-red 2s ease-in-out infinite;
+    will-change: opacity;
+  }
+
+  /* CV Modal styles with Geist fonts */
+  .cv-modal {
+    background: rgba(0, 0, 0, 0.98) !important;
+    backdrop-filter: blur(10px);
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+      "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  /* Input styles with Geist fonts */
+  input,
+  textarea {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    color: #ffffff !important;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+      "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #666666 !important;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+      "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  /* Performance-optimized scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+  }
+
+  /* Enhanced focus states with Geist fonts */
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+
+  /* Performance optimizations */
+  * {
+    box-sizing: border-box;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    body {
+      background: white !important;
+      color: black !important;
+    }
+
+    .chat-footer,
+    .cv-button {
+      display: none !important;
+    }
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+      "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  /* Status indicator animations and styles */
+  @keyframes pulse-blue {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  .status-blue {
+    background-color: #3b82f6;
+  }
+
+  .status-blue-pulsing {
+    background-color: #3b82f6;
+    animation: pulse-blue 1s ease-in-out infinite;
+  }
+
+  .status-red {
+    background-color: #ef4444;
+  }
+
+  .status-green {
+    background-color: #10b981;
+  }
+
+  .glass-pane {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Removed border from chat-footer */
+  .chat-footer {
+    border-top: none !important;
+  }
+}
