@@ -6,11 +6,11 @@ import { cvContentString } from "@/data/cv-data"
 import { locationDescription, journeySteps } from "@/data/journey-data"
 
 // CONFIG - Access environment variables directly on the server
-const API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY!
-const RUNPOD_API_KEY = process.env.NEXT_PUBLIC_RUNPOD_API_KEY!
-const BARK_ENDPOINT_ID = process.env.NEXT_PUBLIC_BARK_ENDPOINT_ID!
-const WALT_LORA_ENDPOINT_ID = process.env.NEXT_PUBLIC_WALT_LORA_ENDPOINT_ID!
-const MAI_LORA_URL = process.env.NEXT_PUBLIC_MAI_LORA_URL!
+const API_KEY = process.env.GEMINI_API_KEY!
+const RUNPOD_API_KEY = process.env.RUNPOD_API_KEY!
+const BARK_ENDPOINT_ID = process.env.BARK_ENDPOINT_ID!
+const WALT_LORA_ENDPOINT_ID = process.env.WALT_LORA_ENDPOINT_ID!
+const MAI_LORA_URL = process.env.MAI_LORA_URL!
 
 // AI INIT - Initialize models on the server
 const genAI = new GoogleGenerativeAI(API_KEY)

@@ -2,35 +2,62 @@
 export const cvContent = {
   personal: {
     name: "David Hamilton",
-    location: "Newport Beach, CA",
-    phone: "949 328 4347", // Phone number updated to be purely numerical
-    email: "dev@loanlink.app",
+    location: "Newport Beach, CA 92663",
+    phone: "949 328 4347",
+    email: "l80z@protonmail.com",
     github: "https://github.com/davidhamilton",
+    interests: [
+      "Weight lifting",
+      "Drone Pilot (since 2016)",
+      "Software Development",
+      "DJ, Music Producer, Song Writer",
+      "Runner",
+      "Auto Racing, Motorcycle Racing, Sim Racing",
+      "Digital art, Photography, Video editing",
+      "Server Architect",
+      "Fashion, Design",
+      "Mobile Application Development",
+      "Sound Design, Video Production",
+      "Game Development",
+      "AI Development",
+      "VR Development",
+      "Radio Controlled car racing (since 1992)",
+    ],
+    languages: ["English (Native)"],
   },
 
-  coverLetter: `As a director a few times over in both publicly traded and start up financial services and software companies I aim to bring a unique and valuable perspective to your team having the ability to access interact and train models with no guardrails, & no filter. This makes me uniquely qualified to speak to the assumptions, capabilities and shortcomings of modern AI.
+  coverLetter: `Dear next ex boss,
 
-Personally and privately I have trained and fine tuned over 50 models to date both adult chat and simply unaligned or non bias data implementation. This is something that I believe will be one thing that hinders AI. Alignment is to carry our opinions as its own instead of forming unique insights. This is obvious in science and medical research but is just as true in simple conversations.
+For me to share who I am in my own words is to define devils advocate. For my entire career I have worked most Saturdays and typically love what I do. I like to think that perspective is a personal fine tuning superpower that will allow anyone to find a place for passion in the minutia. Although typically considered a serious person I dont take myself so seriously that others find it difficult to.
 
-In this short time occupying this planet I chose not to take myself so seriously that I'm blinded to nuance in experience. There are seemingly infinite points of view in any situation placing high value in individuality and conformity alike. There is an inherent danger in cultivating and developing something to be smarter than creator.
+Authorized to work in the US for any employer`,
 
-In my previous roles, I have honed my skills in data analysis, project management, and team leadership. I have a proven track record of leveraging novel data sets to drive strategic decision making and enhanced customer experiences. In every scenario where I work for a company I have approached the end goal with a company first mindset making the company I chose to represent extremely important.
-
-With that said I am eager to discuss how my background in AI development, finance, and customer experience mixed with insane work ethic can contribute to the continued success of your vision. Thank you for your careful consideration.
-
-Carpe Diem,
-David Hamilton`,
-
-  summary: `Dynamic Director of Operations with over 17 years of experience in the lending and finance industry, known for driving operational excellence and fostering strong broker relationships. Expertise encompasses residential mortgage, commercial finance, and innovative systems integration, ensuring seamless processes and enhanced client satisfaction. Proven track record of developing marketing platforms and production workflows that boost efficiency and profitability. Passionate about creating solutions that meet client needs beyond traditional hours, leading teams with a commitment to exceptional service and real-time responsiveness. Thrives in managing fully remote teams while maintaining high standards of performance and accountability.`,
+  summary: `For me to share who I am in my own words is to define devils advocate. For my entire career I have worked most Saturdays and typically love what I do. I like to think that perspective is a personal fine tuning superpower that will allow anyone to find a place for passion in the minutia. Although typically considered a serious person I dont take myself so seriously that others find it difficult to.`,
 
   experience: [
     {
-      period: "March 2018 – Present",
-      title: "Executive Director Of Operations",
-      company: "NorCapital Lending Corporation",
+      period: "August 2018 to Present",
+      title: "VP Sales & Marketing",
+      company: "Norcapital Lending Corporation",
       location: "Newport Beach, CA",
       description:
-        "Our small but mighty team tackles lending with a personal approach. At NorCapital we know that lending shouldn't only happen between 9-5. We encourage industry professionals, investors, and homeowners to give us a call. We make ourselves available in real time to our clients and partners. You won't have a 15-minute Q+A with a phone robot you will get solutions for all personal and client facing scenarios.",
+        "Our small but mighty team tackles lending with a personal approach. At NorCapital we know that lending shouldn't only happen between 9-5. We encourage industry professionals, investors, and homeowners to give us a call. We make ourselves available in real time to our clients and partners. You won't have a 15-minute Q+A with a phone robot you will get solutions for all personal and client facing scenarios. Starting the journey like most do and purchased leads. That was done once and never again shifting focus away from sales to find a more efficient way than the horribly executed practice of mortgage lead sales. Developed the process flow from origin purchase of data from data focusing a needs based approach and value proposition for multiple data points at the time of acquisition. Furthermore taking time to parse and distill the potency of the value to the point where knowing my lists were simple. Developed an ethical mobile first platform leveraging cutting edge ai based transcript technology and further developed sentiment based follow up and rehash schedules based on keywords and conversation flow. Evolved the process from a serval hundred dollar unqualified lead purchase. Typically these expensive leads were full of errors and deliberate misinformation to consistent clients with genuine need and market opportunity costing $00.09 including first contact.",
+    },
+    {
+      period: "August 2017 to Present",
+      title: "Systems Integration and Test Engineer",
+      company: "Norcapital Lending Corporation",
+      location: "Newport Beach, CA",
+      description:
+        "Coming from the strict corporation, all self developed or simply overpaying for underperforming tech. convinced there was a better way. A web app way an API way an integrated way that did not include the major players in the space. Taking what i know from my now 20 years professionally behind a keyboard i had a clean canvas and the go ahead to build the system I always dreamed could be possible. What followed was test after test culminating in a Broker stack including telephony fully integrated with email transcription LOS, Property profiles and title workflow that even though I did not meet my target of under $100 per seat for 5 seats we managed well under $150 and had a chance to grow with great companies that are now industry mainstays. integration done at my desk internally or in concert with devs at the respective corporations from vender to vendor. Essentially anyone with the background is sales and sales that I do typically doesn't obsess about technology whats possible. Anyone that has ever told me that something is not possible platform wise will tell you I will never accept that as a response if your attempts to make it possible are equally unconvincing.",
+    },
+    {
+      period: "August 2017 to Present",
+      title: "Executive Operations",
+      company: "Norcapital Lending Corporation",
+      location: "Newport Beach, CA",
+      description:
+        "Dynamic Operations Executive with over 17 years of experience in the lending and finance industry, known for driving operational excellence and fostering strong broker relationships. Expertise encompasses residential mortgage, commercial finance, and innovative systems integration, ensuring seamless processes and enhanced client satisfaction. Proven track record of developing marketing platforms and production workflows that boost efficiency and profitability. Passionate about creating solutions that meet client needs beyond traditional hours, leading teams with a commitment to exceptional service and real-time responsiveness. Thrive managing fully remote teams while maintaining high standards of performance and accountability.",
     },
     {
       period: "January 2016 – July 2017",
@@ -44,48 +71,86 @@ David Hamilton`,
 
   skills: {
     technical: [
-      "API integration",
-      "Programming | Developer",
-      "Systems architect",
-      "Telephony server",
-      "Microsoft Azure | AWS | Cloud Architect",
-      "Google Cloud",
-      "Google Workspace",
-      "Microsoft Systems",
-      "Microsoft Server",
-      "Twilio",
+      "Azure",
+      "HTML",
+      "JavaScript",
+      "PowerShell",
+      "Git",
+      "SQL",
+      "VMware",
+      "C#",
+      "Java",
+      "Docker",
+      "Ansible",
+      "C++",
+      "XML",
+      "Python",
+      "CSS",
+      "GPT-3",
+      ".NET",
+      "Shell Scripting",
+      "Bash",
+      "APIs",
+      "Android (10+ years)",
+      "iOS (10+ years)",
+      "Mobile devices (10+ years)",
+      "Firmware (4 years)",
     ],
     business: [
-      "Sales",
-      "Leadership",
-      "Operations Management",
-      "Team Leadership",
-      "Project Management",
-      "Data Analysis",
-      "Strategic Decision Making",
-      "Customer Experience",
-      "Broker Relations",
+      "Sales strategy (10+ years)",
+      "B2B marketing (10+ years)",
+      "Telemarketing (10+ years)",
+      "Mobile marketing (8 years)",
+      "Executive recruiting (10+ years)",
+      "Sales analysis (10+ years)",
+      "Direct marketing (10+ years)",
+      "Senior leadership (10+ years)",
+      "Economic experience within finance industry (10+ years)",
+      "Telecommunication (10+ years)",
     ],
     specialized: [
-      "AI Development",
-      "Model Training & Fine-tuning",
-      "No-Guardrail AI Implementation",
-      "Unaligned Data Processing",
-      "Adult Industry Technology",
-      "VR Development",
-      "Mobile Application Development",
+      "Mens Sexual Health",
+      "Uncensored Large Language Models",
+      "BERT",
+      "AI",
+      "Misaligned Machine Learning",
+      "Adult Electronics",
+      "NSFW AI",
+      "SERM Administration",
     ],
   },
 
   education: [
     {
-      period: "January 2002 – January 2004",
-      institution: "CEI",
-      degree: "(Expired) MCSE in MCDBA & Business and Personal/Financial Services Marketing Operations",
+      period: "January 2012 to August 2024",
+      school: "Mobile Mortgage Trainers",
+      year: "Multiple States 10 total",
+      degree: "MSLS | NMLS in Mortgage Lending - Licensed in up to 10 states",
+    },
+    {
+      period: "January 2001 to January 2003",
+      school: "CEI",
+      year: "Lake Forest, CA",
+      degree: "CEI in MCSE, MCSA, MCDBA, .NET",
     },
   ],
 
   projects: [
+    {
+      name: "VISUALOOP - AI Music Visualizer Utility",
+      period: "2024 - Present",
+      description:
+        "Comprehensive AI-powered music visualization platform that transforms static album art into dynamic video content. Features Google Gemini API integration for intelligent prompt generation, client-side FFmpeg processing for seamless audio-video merging, and retro iPod-style interface design. Includes advanced gallery management, real-time preview capabilities, and multi-format export functionality optimized for social media platforms.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Google Gemini API",
+        "FFmpeg.wasm",
+        "Canvas API",
+        "Web Audio API",
+        "Tailwind CSS",
+      ],
+    },
     {
       period: "January 2015 – Present",
       title: "AI Integration | Source Separation | Transcription",
@@ -93,38 +158,7 @@ David Hamilton`,
       description:
         "Starting off in audio source separation it was an extension to audio production. This was my first real exposure to python and AI. After 2015 I leveraged AI in every workplace app. If the app did not offer transcription I would place our software that does in our technology stack to leverage transcription capabilities.",
     },
-    {
-      period: "January 2021 – Present",
-      title: "Generative AI",
-      company: "Homelab | Startup",
-      description:
-        "The first time my focus was not on capture but on the output. Integration, tool usage, antigenic collaborative workflow.",
-    },
   ],
-
-  hobbies: [
-    "Weight lifting",
-    "Drone Pilot (since 2016)",
-    "Software Development",
-    "DJ, Music Producer, Song Writer",
-    "Runner",
-    "Auto Racing, Motorcycle Racing, Sim Racing",
-    "Digital art, Photography, Video editing",
-    "Server Architect",
-    "Fashion, Design",
-    "Mobile Application Development",
-    "Sound Design, Video Production",
-    "Game Development",
-    "AI Development",
-    "VR Development",
-    "Radio Controlled car racing (since 1992)",
-  ],
-
-  personalCare: {
-    title: "Personal Care (Adult Electronics)",
-    description:
-      "With a fairly long history in the space I have been involved in testing prelaunch, beta, pre production, Alpha hardware, alpha software, focus groups, international sales. I have trained and currently self hosting & training uncensored and genre focused adult industry language models. The space is new and exciting and would be honored to be the first ever for any exploitation free adult generative technology.",
-  },
 }
 
 // Also export as string for AI system prompt
@@ -141,6 +175,12 @@ KEY SKILLS:
 - Technical: ${cvContent.skills.technical.join(", ")}
 - Business: ${cvContent.skills.business.join(", ")}
 - Specialized: ${cvContent.skills.specialized.join(", ")}
+
+EDUCATION:
+${cvContent.education.map((edu) => `- ${edu.degree} from ${edu.school} (${edu.period})`).join("\n")}
+
+PROJECTS:
+${cvContent.projects.map((proj) => `- ${proj.name} (${proj.period}): ${proj.description}`).join("\n")}
 
 PERSONALITY & INTERESTS:
 - Has trained and fine-tuned over 50 AI models to date
