@@ -1,11 +1,28 @@
-// data/cv-data.ts
 export const cvContent = {
   personal: {
     name: "David Hamilton",
     location: "Newport Beach, CA",
-    phone: "949 328 4347", // Phone number updated to be purely numerical
-    email: "dev@loanlink.app",
-    github: "https://github.com/davidhamilton",
+    phone: "949 328 4347",
+    email: "180z@protonmail.com",
+    linkedin: "https://www.linkedin.com/in/approval",
+    interests: [
+      "Weight lifting",
+      "Drone Pilot (since 2016)",
+      "Software Development",
+      "DJ, Music Producer, Song Writer",
+      "Runner",
+      "Auto Racing, Motorcycle Racing, Sim Racing",
+      "Digital art, Photography, Video editing",
+      "Server Architect",
+      "Fashion, Design",
+      "Mobile Application Development",
+      "Sound Design, Video Production",
+      "Game Development",
+      "AI Development",
+      "VR Development",
+      "Radio Controlled car racing (since 1992)",
+    ],
+    languages: ["English (Native)", "Spanish (Conversational)"],
   },
 
   coverLetter: `As a director a few times over in both publicly traded and start up financial services and software companies I aim to bring a unique and valuable perspective to your team having the ability to access interact and train models with no guardrails, & no filter. This makes me uniquely qualified to speak to the assumptions, capabilities and shortcomings of modern AI.
@@ -21,131 +38,192 @@ With that said I am eager to discuss how my background in AI development, financ
 Carpe Diem,
 David Hamilton`,
 
-  summary: `Dynamic Director of Operations with over 17 years of experience in the lending and finance industry, known for driving operational excellence and fostering strong broker relationships. Expertise encompasses residential mortgage, commercial finance, and innovative systems integration, ensuring seamless processes and enhanced client satisfaction. Proven track record of developing marketing platforms and production workflows that boost efficiency and profitability. Passionate about creating solutions that meet client needs beyond traditional hours, leading teams with a commitment to exceptional service and real-time responsiveness. Thrives in managing fully remote teams while maintaining high standards of performance and accountability.`,
+  summary: `A technology-driven executive with over 17 years of leadership experience spanning finance, sales, and high-growth, non-traditional e-commerce sectors. Expert in architecting and scaling business operations from the ground up by integrating proprietary technology, AI-driven marketing, and sophisticated product strategies. Proven ability to lead in niche markets, including the adult lifestyle and entertainment industry, by developing innovative solutions that capture market share and drive profitability in complex regulatory and technological environments. A dedicated leader in building and managing high-performing, fully remote global teams.`,
+
+  areasOfExpertise: {
+    executiveStrategy: [
+      "Executive & Strategy",
+      "Technology & Product Innovation",
+      "Sales & Marketing",
+      "P&L and Operations Management",
+      "Strategic Planning & Execution",
+    ],
+    technology: [
+      "AI/ML Model Development (Uncensored LLMs)",
+      "Full-Stack System Architecture & Integration",
+      "Mobile-First Platform Development",
+      "Firmware & IoT for Connected Consumer Devices",
+      "AI-Powered User Engagement & Retention",
+    ],
+    business: [
+      "Go-to-Market Strategy (Adult Verticals)",
+      "Business Development & Partnerships",
+      "Data-Driven Customer Acquisition",
+      "Product Lifecycle Management (Alpha/Beta)",
+      "Digital Marketing for Adult E-commerce",
+      "Remote Team Leadership & Scaling",
+      "Supply Chain & Manufacturing Oversight",
+      "Community Management (Metaverse/MMO)",
+    ],
+  },
 
   experience: [
+    {
+      period: "2015 – Present",
+      title: "Independent Consultant & Product Advisor",
+      company: "Adult Technology Sector",
+      location: "Remote",
+      description:
+        "Leveraging deep industry expertise to advise startups and established companies on product development, market strategy, and user engagement within the adult technology and digital content space. Advised international companies on the full product lifecycle, providing critical feedback during pre-launch, beta, and alpha stages for both hardware and software. Conducted focus groups and provided detailed user experience (UX) analysis on connected consumer devices and adult electronics, influencing final design and functionality. Currently self-hosting, training, and fine-tuning uncensored and genre-focused Large Language Models (LLMs) to pioneer exploitation-free generative AI technology for the industry. Analyzed user behavior, community dynamics, and monetization strategies within a large-scale adult-facing metaverse (MMO) with over 200,000 users.",
+    },
     {
       period: "March 2018 – Present",
       title: "Executive Director Of Operations",
       company: "NorCapital Lending Corporation",
       location: "Newport Beach, CA",
       description:
-        "Our small but mighty team tackles lending with a personal approach. At NorCapital we know that lending shouldn't only happen between 9-5. We encourage industry professionals, investors, and homeowners to give us a call. We make ourselves available in real time to our clients and partners. You won't have a 15-minute Q+A with a phone robot you will get solutions for all personal and client facing scenarios.",
+        "Directed all sales, marketing, technology, and operational functions. Built the company's infrastructure from scratch, establishing a fully remote operational model and a proprietary technology ecosystem. Architected a data-driven marketing strategy that cut lead acquisition costs by over 99% (from hundreds of dollars to $0.09 per contact). Built and managed a high-performing, fully remote team, maintaining exceptional standards of performance and accountability across all departments. Designed and deployed a proprietary 'Broker Stack' integrating telephony, AI transcription, and LOS, creating a highly efficient, remote-friendly workflow.",
     },
     {
       period: "January 2016 – July 2017",
-      title: "Sales Manager | Rehash Division Founder",
-      company: "Greenlight Loans/Nationstar Mortgage/MrCooper",
-      location: "Irvine, California",
+      title: "Sales Manager & Founder, Sales Recovery Division",
+      company: "Greenlight Loans / Nationstar Mortgage (Mr. Cooper)",
+      location: "Irvine, CA",
       description:
-        "My position with this amazing group started in the Irvine CA office of Greenlight financial services. As a loan officer in a high volume call center, I had the ability to field more than 100 loan scenarios a week. This lead to the addition of one-off special forces of call center banking. I was instrumental in building leading and ultimately managing rehash for the remainder of my time with the organization. Without a single inbound call we ranked top 5 in the organization for our 4 year run.",
+        "Promoted to lead a new division focused on re-engaging and converting previously incomplete or lost business opportunities. Founded, built, and managed the company's first 'Rehash' division, a strategic team focused on client retention and sales recovery. Led the team to rank in the top 5 of the entire organization for sales production, operating on a 100% outbound model without any inbound leads. Developed a masterclass in follow-up and client service that dramatically increased conversion rates on aged leads. Previously served as Mortgage Loan Officer (July 2014 – December 2015): Consistently exceeded sales targets in a high-volume call center environment.",
+    },
+    {
+      period: "August 2005 – November 2009",
+      title: "VP of Sales",
+      company: "Integrity Funding",
+      location: "Newport Beach, CA",
+      description:
+        "Led B2B commercial finance initiatives for a variety of sectors, including franchise, startup, and medical equipment financing. Enhanced revenue streams by over 30% through the development of strategic broker channel partnerships. Pioneered technology integrations to optimize workflows for a distributed and remote salesforce. Managed the entire sales cycle for high-value medical and ophthalmology equipment financing projects.",
     },
   ],
 
   skills: {
     technical: [
+      "AI/ML Model Development",
+      "Uncensored LLM Training & Fine-tuning",
+      "Full-Stack System Architecture",
       "API integration",
       "Programming | Developer",
       "Systems architect",
       "Telephony server",
       "Microsoft Azure | AWS | Cloud Architect",
       "Google Cloud",
-      "Google Workspace",
-      "Microsoft Systems",
-      "Microsoft Server",
-      "Twilio",
+      "Mobile Application Development",
+      "IoT & Firmware Development",
+      "VR Development",
     ],
     business: [
-      "Sales",
-      "Leadership",
+      "Executive Leadership",
+      "P&L Management",
       "Operations Management",
-      "Team Leadership",
-      "Project Management",
-      "Data Analysis",
-      "Strategic Decision Making",
-      "Customer Experience",
-      "Broker Relations",
+      "Remote Team Leadership & Scaling",
+      "Strategic Planning & Execution",
+      "Business Development & Partnerships",
+      "Data-Driven Customer Acquisition",
+      "Product Lifecycle Management",
+      "Go-to-Market Strategy",
+      "Digital Marketing",
     ],
     specialized: [
-      "AI Development",
-      "Model Training & Fine-tuning",
-      "No-Guardrail AI Implementation",
-      "Unaligned Data Processing",
-      "Adult Industry Technology",
-      "VR Development",
-      "Mobile Application Development",
+      "Adult Industry Technology Consulting",
+      "Uncensored AI Development",
+      "Product Advisory (Alpha/Beta)",
+      "UX Analysis for Consumer Electronics",
+      "Community Management (Metaverse/MMO)",
+      "Exploitation-Free AI Technology",
+      "Niche Market Strategy",
+      "Regulatory Compliance (Adult Verticals)",
     ],
   },
 
   education: [
     {
-      period: "January 2002 – January 2004",
-      institution: "CEI",
+      year: "January 2002 – January 2004",
+      school: "CEI",
       degree: "(Expired) MCSE in MCDBA & Business and Personal/Financial Services Marketing Operations",
     },
   ],
 
   projects: [
     {
-      period: "January 2015 – Present",
-      title: "AI Integration | Source Separation | Transcription",
-      company: "Integrity Finance | Norcapital",
+      name: "VISUALOOP - AI Music Visualizer Utility",
+      period: "2024 - Present",
       description:
-        "Starting off in audio source separation it was an extension to audio production. This was my first real exposure to python and AI. After 2015 I leveraged AI in every workplace app. If the app did not offer transcription I would place our software that does in our technology stack to leverage transcription capabilities.",
+        "A sophisticated single-page web application that transforms static album artwork into dynamic music visualizations using AI. Users upload an image and audio file, the system generates contextual video content via Google Gemini API, then merges it with the audio using client-side FFmpeg processing. Features a retro iPod-style interface with click wheel navigation, real-time processing feedback, gallery management, and direct MP4 download capabilities.",
+      technologies: [
+        "React/Next.js",
+        "Google Gemini API",
+        "FFmpeg.wasm",
+        "Canvas API",
+        "Web Audio API",
+        "TypeScript",
+        "Tailwind CSS",
+        "File System Access API",
+      ],
     },
     {
-      period: "January 2021 – Present",
-      title: "Generative AI",
-      company: "Homelab | Startup",
+      name: "Uncensored LLM Development & Training",
+      period: "2021 – Present",
       description:
-        "The first time my focus was not on capture but on the output. Integration, tool usage, antigenic collaborative workflow.",
+        "Self-hosting, training, and fine-tuning over 50 uncensored and genre-focused Large Language Models for adult industry applications. Pioneering exploitation-free generative AI technology while developing unaligned data processing methodologies. Focus on creating AI systems that form unique insights rather than carrying predetermined biases.",
+      technologies: [
+        "Python",
+        "PyTorch",
+        "Transformers",
+        "CUDA",
+        "Docker",
+        "Linux Server Administration",
+        "Model Fine-tuning",
+      ],
     },
-  ],
-
-  hobbies: [
-    "Weight lifting",
-    "Drone Pilot (since 2016)",
-    "Software Development",
-    "DJ, Music Producer, Song Writer",
-    "Runner",
-    "Auto Racing, Motorcycle Racing, Sim Racing",
-    "Digital art, Photography, Video editing",
-    "Server Architect",
-    "Fashion, Design",
-    "Mobile Application Development",
-    "Sound Design, Video Production",
-    "Game Development",
-    "AI Development",
-    "VR Development",
-    "Radio Controlled car racing (since 1992)",
+    {
+      name: "Proprietary Broker Stack Integration",
+      period: "2018 – Present",
+      description:
+        "Designed and deployed a comprehensive technology ecosystem integrating telephony, AI transcription, and Loan Origination System (LOS) for fully remote mortgage operations. Achieved 99% reduction in lead acquisition costs through data-driven marketing automation.",
+      technologies: ["Twilio", "AI Transcription APIs", "CRM Integration", "Marketing Automation", "Data Analytics"],
+    },
   ],
 
   personalCare: {
-    title: "Personal Care (Adult Electronics)",
+    title: "Adult Technology Consulting",
     description:
-      "With a fairly long history in the space I have been involved in testing prelaunch, beta, pre production, Alpha hardware, alpha software, focus groups, international sales. I have trained and currently self hosting & training uncensored and genre focused adult industry language models. The space is new and exciting and would be honored to be the first ever for any exploitation free adult generative technology.",
+      "With extensive experience in the adult technology sector, involved in testing pre-launch, beta, pre-production, alpha hardware and software, focus groups, and international sales. Currently training and self-hosting uncensored and genre-focused adult industry language models. Pioneering exploitation-free adult generative technology in an emerging and exciting space.",
   },
 }
 
-// Also export as string for AI system prompt
 export const cvContentString = `
 --- DAVID HAMILTON'S PROFESSIONAL CV ---
 
-SUMMARY: 
+EXECUTIVE SUMMARY: 
 ${cvContent.summary}
 
-EXPERIENCE:
-${cvContent.experience.map((exp) => `- ${exp.title} at ${exp.company} (${exp.period})`).join("\n")}
+AREAS OF EXPERTISE:
+Executive & Strategy: ${cvContent.areasOfExpertise.executiveStrategy.join(", ")}
+Technology: ${cvContent.areasOfExpertise.technology.join(", ")}
+Business: ${cvContent.areasOfExpertise.business.join(", ")}
+
+PROFESSIONAL EXPERIENCE:
+${cvContent.experience.map((exp) => `- ${exp.title} at ${exp.company} (${exp.period}): ${exp.description.substring(0, 200)}...`).join("\n")}
 
 KEY SKILLS:
 - Technical: ${cvContent.skills.technical.join(", ")}
 - Business: ${cvContent.skills.business.join(", ")}
 - Specialized: ${cvContent.skills.specialized.join(", ")}
 
-PERSONALITY & INTERESTS:
-- Has trained and fine-tuned over 50 AI models to date
-- Believes in forming unique opinions rather than conforming
-- Approaches every scenario with a "company first" mindset
+NOTABLE PROJECTS:
+${cvContent.projects.map((proj) => `- ${proj.name} (${proj.period}): ${proj.description.substring(0, 150)}...`).join("\n")}
+
+EDUCATION:
+${cvContent.education.map((edu) => `- ${edu.degree} from ${edu.school} (${edu.year})`).join("\n")}
+
+PERSONAL INTERESTS:
+${cvContent.personal.interests.join(", ")}
 
 --- END OF CV ---
 `

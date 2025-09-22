@@ -43,9 +43,10 @@
     }
   }
 
-  /* Base styles with Geist fonts and performance optimizations */
+  /* Base styles with Helvetica fonts and performance optimizations */
   body {
-    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    font-family:
+      "Helvetica", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
       "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     background: #000000 !important;
     color: #ffffff !important;
@@ -57,44 +58,45 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Enhanced font family utilities with proper fallbacks */
+  /* Enhanced font family utilities with Helvetica fallbacks */
   .font-sans {
-    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    font-family:
+      "Helvetica", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
       "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
   }
 
   .font-mono {
-    font-family: var(--font-geist-mono), "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro", monospace;
+    font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro", monospace;
     font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
   }
 
-  /* Geist font weight utilities */
-  .font-geist-thin {
+  /* Standard font weight utilities replacing Geist-specific classes */
+  .font-thin {
     font-weight: 100;
   }
-  .font-geist-extralight {
+  .font-extralight {
     font-weight: 200;
   }
-  .font-geist-light {
+  .font-light {
     font-weight: 300;
   }
-  .font-geist-normal {
+  .font-normal {
     font-weight: 400;
   }
-  .font-geist-medium {
+  .font-medium {
     font-weight: 500;
   }
-  .font-geist-semibold {
+  .font-semibold {
     font-weight: 600;
   }
-  .font-geist-bold {
+  .font-bold {
     font-weight: 700;
   }
-  .font-geist-extrabold {
+  .font-extrabold {
     font-weight: 800;
   }
-  .font-geist-black {
+  .font-black {
     font-weight: 900;
   }
 
@@ -128,22 +130,24 @@
     will-change: opacity;
   }
 
-  /* CV Modal styles with Geist fonts */
+  /* CV Modal styles with Helvetica fonts */
   .cv-modal {
     background: rgba(0, 0, 0, 0.98) !important;
     backdrop-filter: blur(10px);
-    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    font-family:
+      "Helvetica", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
       "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
 
-  /* Input styles with Geist fonts */
+  /* Input styles with Helvetica fonts */
   input,
   textarea {
     background: transparent !important;
     border: none !important;
     outline: none !important;
     color: #ffffff !important;
-    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    font-family:
+      "Helvetica", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
       "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
@@ -151,7 +155,8 @@
   input::placeholder,
   textarea::placeholder {
     color: #666666 !important;
-    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    font-family:
+      "Helvetica", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
       "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
 
@@ -173,7 +178,7 @@
     background: #555555;
   }
 
-  /* Enhanced focus states with Geist fonts */
+  /* Enhanced focus states with Helvetica fonts */
   button:focus-visible,
   input:focus-visible,
   textarea:focus-visible {
@@ -222,7 +227,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    /* Updated body font-family to use Helvetica */
+    font-family:
+      "Helvetica", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
       "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
 

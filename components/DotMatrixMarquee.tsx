@@ -7,7 +7,7 @@ interface DotMatrixMarqueeProps {
   speed?: number
 }
 
-export default function DotMatrixMarquee({ text, speed = 4 }: DotMatrixMarqueeProps) {
+export default function DotMatrixMarquee({ text, speed = 20 }: DotMatrixMarqueeProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [animationId, setAnimationId] = useState<number>()
 
@@ -23,7 +23,7 @@ export default function DotMatrixMarquee({ text, speed = 4 }: DotMatrixMarqueePr
       [1, 0, 0, 0, 1],
       [0, 1, 1, 1, 1],
     ],
-    // Other letters...
+    // Uppercase letters A-Z (complete set)
     A: [
       [0, 1, 1, 1, 0],
       [1, 0, 0, 0, 1],
@@ -104,6 +104,159 @@ export default function DotMatrixMarquee({ text, speed = 4 }: DotMatrixMarqueePr
       [0, 0, 1, 0, 0],
       [0, 0, 1, 0, 0],
       [0, 1, 1, 1, 0],
+    ],
+    J: [
+      [0, 0, 1, 1, 1],
+      [0, 0, 0, 1, 0],
+      [0, 0, 0, 1, 0],
+      [0, 0, 0, 1, 0],
+      [1, 0, 0, 1, 0],
+      [1, 0, 0, 1, 0],
+      [0, 1, 1, 0, 0],
+    ],
+    K: [
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 1, 0],
+      [1, 0, 1, 0, 0],
+      [1, 1, 0, 0, 0],
+      [1, 0, 1, 0, 0],
+      [1, 0, 0, 1, 0],
+      [1, 0, 0, 0, 1],
+    ],
+    L: [
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 1, 1, 1, 1],
+    ],
+    M: [
+      [1, 0, 0, 0, 1],
+      [1, 1, 0, 1, 1],
+      [1, 0, 1, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+    ],
+    N: [
+      [1, 0, 0, 0, 1],
+      [1, 1, 0, 0, 1],
+      [1, 0, 1, 0, 1],
+      [1, 0, 1, 0, 1],
+      [1, 0, 0, 1, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+    ],
+    O: [
+      [0, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+    ],
+    P: [
+      [1, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 1, 1, 1, 0],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+    ],
+    Q: [
+      [0, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 1, 0, 1],
+      [1, 0, 0, 1, 0],
+      [0, 1, 1, 0, 1],
+    ],
+    R: [
+      [1, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 1, 1, 1, 0],
+      [1, 0, 1, 0, 0],
+      [1, 0, 0, 1, 0],
+      [1, 0, 0, 0, 1],
+    ],
+    S: [
+      [0, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [0, 1, 1, 1, 0],
+      [0, 0, 0, 0, 1],
+      [0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 0],
+    ],
+    T: [
+      [1, 1, 1, 1, 1],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+    ],
+    U: [
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+    ],
+    V: [
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 0, 1, 0],
+      [0, 1, 0, 1, 0],
+      [0, 0, 1, 0, 0],
+    ],
+    W: [
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [1, 0, 1, 0, 1],
+      [1, 0, 1, 0, 1],
+      [1, 1, 0, 1, 1],
+      [1, 0, 0, 0, 1],
+    ],
+    X: [
+      [1, 0, 0, 0, 1],
+      [0, 1, 0, 1, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 1, 0, 1, 0],
+      [1, 0, 0, 0, 1],
+    ],
+    Y: [
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 0, 1, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+    ],
+    Z: [
+      [1, 1, 1, 1, 1],
+      [0, 0, 0, 1, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 1, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 1, 1, 1, 1],
     ],
     // Lowercase letters
     a: [
@@ -368,6 +521,60 @@ export default function DotMatrixMarquee({ text, speed = 4 }: DotMatrixMarqueePr
       [0, 0, 0, 0, 1],
       [1, 1, 1, 1, 0],
     ],
+    "4": [
+      [1, 0, 0, 1, 0],
+      [1, 0, 0, 1, 0],
+      [1, 0, 0, 1, 0],
+      [1, 1, 1, 1, 1],
+      [0, 0, 0, 1, 0],
+      [0, 0, 0, 1, 0],
+      [0, 0, 0, 1, 0],
+    ],
+    "5": [
+      [1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 1, 1, 1, 0],
+      [0, 0, 0, 0, 1],
+      [0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 0],
+    ],
+    "6": [
+      [0, 1, 1, 1, 0],
+      [1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+      [1, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+    ],
+    "7": [
+      [1, 1, 1, 1, 1],
+      [0, 0, 0, 0, 1],
+      [0, 0, 0, 1, 0],
+      [0, 0, 1, 0, 0],
+      [0, 1, 0, 0, 0],
+      [0, 1, 0, 0, 0],
+      [0, 1, 0, 0, 0],
+    ],
+    "8": [
+      [0, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+    ],
+    "9": [
+      [0, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 1],
+      [0, 0, 0, 0, 1],
+      [0, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+    ],
     ".": [
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
@@ -428,78 +635,72 @@ export default function DotMatrixMarquee({ text, speed = 4 }: DotMatrixMarqueePr
 
     let offset = canvas.width
     let lastTime = 0
+    let animationFrameId: number
 
-    // Dot size and spacing for circular dots
-    const dotRadius = 1.1 // Radius of the circle dot (~2.2px diameter)
-    const spacing = 4.4 // Space between dot origins (center-to-center, provides ~2.2px gap)
+    const dotRadius = 1.1
+    const spacing = 4.4
 
     const animate = (currentTime: number) => {
-      // Target 120fps refresh rate
       if (currentTime - lastTime < 1000 / 120) {
-        const id = requestAnimationFrame(animate)
-        setAnimationId(id)
+        animationFrameId = requestAnimationFrame(animate)
         return
       }
       lastTime = currentTime
 
-      // Clear canvas with pure black
+      // Clear canvas
       ctx.fillStyle = "#000000"
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-      // Draw background grid - unlit lightbulb effect
       const rows = Math.floor(canvas.height / spacing)
       const cols = Math.floor(canvas.width / spacing)
 
-      // Background dots (unlit lightbulbs) - subtle gray with darker center
       for (let row = 0; row < rows; row++) {
         for (let col = 0; col < cols; col++) {
-          // Calculate center for arc
           const x = col * spacing + spacing / 2
           const y = row * spacing + spacing / 2
 
-          // Outer lightbulb ring (very subtle)
-          ctx.fillStyle = "#1a1a1a" // Darker grey for outer circle
+          // Outer ring
+          ctx.fillStyle = "#0a0a0a"
           ctx.beginPath()
-          ctx.arc(x, y, dotRadius, 0, Math.PI * 2)
+          ctx.arc(x, y, dotRadius * 0.8, 0, Math.PI * 2)
           ctx.fill()
 
-          // Inner lightbulb dot (even darker)
-          ctx.fillStyle = "#0d0d0d" // Even darker grey for inner circle
+          // Inner dot
+          ctx.fillStyle = "#050505"
           ctx.beginPath()
-          ctx.arc(x, y, dotRadius * 0.5, 0, Math.PI * 2) // Smaller inner circle
+          ctx.arc(x, y, dotRadius * 0.3, 0, Math.PI * 2)
           ctx.fill()
         }
       }
 
-      // Draw text characters - MAXIMUM BRIGHTNESS WHITE DOTS
-      const charWidth = 5 * spacing + spacing // 5 dots + 1 space between characters
-      const charHeight = 7 * spacing // 7 rows * spacing
-      const startY = (canvas.height - charHeight) / 2 // Center vertically
+      const charWidth = 5 * spacing + spacing
+      const charHeight = 7 * spacing
+      const startY = (canvas.height - charHeight) / 2
 
       let currentX = offset
 
       for (let i = 0; i < text.length; i++) {
-        const char = text[i] // Keep original case
+        const char = text[i]
         const pattern = fontPatterns[char] || fontPatterns[char.toLowerCase()] || fontPatterns[" "]
 
-        // Only draw if character is visible on screen
-        if (currentX > -charWidth && currentX < canvas.width) {
+        if (currentX > -charWidth && currentX < canvas.width && pattern) {
           for (let row = 0; row < pattern.length; row++) {
             for (let col = 0; col < pattern[row].length; col++) {
               if (pattern[row][col] === 1) {
-                // Calculate center for arc
                 const x = currentX + col * spacing + spacing / 2
                 const y = startY + row * spacing + spacing / 2
 
                 if (x >= 0 && x < canvas.width) {
-                  // MAXIMUM BRIGHTNESS WHITE DOT - NO BLUR, NO GLOW, PURE WHITE
-                  ctx.shadowColor = "transparent"
-                  ctx.shadowBlur = 0
-                  ctx.fillStyle = "#ffffff" // Pure white
-                  ctx.globalAlpha = 1.0 // Maximum opacity
+                  ctx.shadowColor = "#ffffff"
+                  ctx.shadowBlur = 3
+                  ctx.fillStyle = "#ffffff"
+                  ctx.globalAlpha = 1.0
                   ctx.beginPath()
-                  ctx.arc(x, y, dotRadius, 0, Math.PI * 2) // Draw circular dot
+                  ctx.arc(x, y, dotRadius, 0, Math.PI * 2)
                   ctx.fill()
+
+                  // Reset shadow for next iteration
+                  ctx.shadowBlur = 0
                 }
               }
             }
@@ -509,24 +710,20 @@ export default function DotMatrixMarquee({ text, speed = 4 }: DotMatrixMarqueePr
         currentX += charWidth
       }
 
-      // Move text to the left at 60-120hz speed
       offset -= speed
 
-      // Reset when text is completely off screen
       if (offset < -text.length * charWidth) {
         offset = canvas.width
       }
 
-      const id = requestAnimationFrame(animate)
-      setAnimationId(id)
+      animationFrameId = requestAnimationFrame(animate)
     }
 
-    const id = requestAnimationFrame(animate)
-    setAnimationId(id)
+    animationFrameId = requestAnimationFrame(animate)
 
     return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId)
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
       }
     }
   }, [text, speed])
@@ -537,7 +734,7 @@ export default function DotMatrixMarquee({ text, speed = 4 }: DotMatrixMarqueePr
       className="w-full h-full"
       style={{
         imageRendering: "pixelated",
-        // Removed brightness/contrast filter to ensure pixel-perfect, no-glare dots
+        filter: "brightness(1.5) contrast(1.2)",
       }}
     />
   )

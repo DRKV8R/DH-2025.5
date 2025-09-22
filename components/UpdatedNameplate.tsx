@@ -7,10 +7,16 @@ export default function UpdatedNameplate() {
     <div className="text-left space-y-4 max-w-5xl">
       {/* Name */}
       <div className="space-y-0">
-        <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-geist-light tracking-tight leading-[0.8]">
+        <h1
+          className="text-8xl md:text-9xl lg:text-[12rem] font-geist-light tracking-tight leading-[0.8]"
+          style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
+        >
           {updatedCVContent.personal.name.split(" ")[0]}
         </h1>
-        <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-geist-light tracking-tight leading-[0.8]">
+        <h1
+          className="text-8xl md:text-9xl lg:text-[12rem] font-geist-light tracking-tight leading-[0.8]"
+          style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
+        >
           {updatedCVContent.personal.name.split(" ")[1]}
         </h1>
       </div>

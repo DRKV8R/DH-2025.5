@@ -1,6 +1,4 @@
 import type React from "react"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import type { Metadata } from "next"
 
@@ -71,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Essential performance hints only */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
@@ -171,7 +169,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={`${GeistSans.className} bg-black text-white antialiased`}>{children}</body>
+      <body className="bg-black text-white antialiased" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>
+        {children}
+      </body>
     </html>
   )
 }

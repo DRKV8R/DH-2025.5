@@ -44,7 +44,10 @@ export default function IntroNameplateTypewriter({ onComplete }: IntroNameplateT
     <div className="fixed inset-0 bg-black text-white flex items-center justify-start z-40">
       <div className="w-full max-w-4xl mx-auto px-16">
         <div className="font-geist-light text-left whitespace-pre-wrap">
-          <h1 className="text-8xl md:text-9xl lg:text-[12rem] tracking-tight leading-[0.8] text-white">
+          <h1
+            className="text-8xl md:text-9xl lg:text-[12rem] tracking-tight leading-[0.8] text-white"
+            style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
+          >
             {displayText.split("\n")[0]}
           </h1>
           <p className="text-3xl md:text-4xl lg:text-5xl text-gray-300 tracking-wide leading-tight mt-4">

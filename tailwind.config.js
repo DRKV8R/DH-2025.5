@@ -19,7 +19,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          "var(--font-geist-sans)",
+          "Helvetica",
+          "Arial",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
@@ -32,15 +33,7 @@ module.exports = {
           "Helvetica Neue",
           "sans-serif",
         ],
-        mono: [
-          "var(--font-geist-mono)",
-          "SF Mono",
-          "Monaco",
-          "Inconsolata",
-          "Roboto Mono",
-          "Source Code Pro",
-          "monospace",
-        ],
+        mono: ["SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro", "monospace"],
         serif: ["Georgia", "Times New Roman", "serif"], // Added serif font
       },
       colors: {
