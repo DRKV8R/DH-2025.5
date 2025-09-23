@@ -1,10 +1,14 @@
 // API Connectors - Copy and paste these functions
 
-// 1. GEMINI AI CONNECTOR (Already working)
+// 1. GEMINI AI CONNECTOR (Server-side only)
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai"
 
-export const initializeGemini = (apiKey: string) => {
-  const genAI = new GoogleGenerativeAI(apiKey)
+export const initializeGemini = () => {
+  if (!process.env.GEMINI_API_KEY) {
+    throw new Error("GEMINI_API_KEY environment variable is required")
+  }
+
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
   return {
     chatModel: genAI.getGenerativeModel({
       model: "gemini-pro",
@@ -198,34 +202,35 @@ export const videoGenerationPipeline = {
 
 // 7. ENVIRONMENT VARIABLES SETUP
 /*
-Add these to your .env.local file:
+Add these to your .env.local file (server-side only):
 
-NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
-NEXT_PUBLIC_RUNPOD_API_KEY=your_runpod_api_key_here
-NEXT_PUBLIC_BARK_ENDPOINT_ID=your_bark_endpoint_id_here
-NEXT_PUBLIC_WALT_LORA_ENDPOINT_ID=your_walt_lora_endpoint_id_here
-NEXT_PUBLIC_MAI_LORA_URL=your_mai_lora_url_here
+GEMINI_API_KEY=your_gemini_api_key_here
+RUNPOD_API_KEY=your_runpod_api_key_here
+BARK_ENDPOINT_ID=your_bark_endpoint_id_here
+WALT_LORA_ENDPOINT_ID=your_walt_lora_endpoint_id_here
+MAI_LORA_URL=your_mai_lora_url_here
+ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
 */
 
-// 8. USAGE EXAMPLE
+// 8. USAGE EXAMPLE (Server-side only)
 /*
 import { runPodAPI, barkAPI, videoGenerationPipeline } from '@/lib/api-connectors'
 
-// Generate video
+// Generate video (in API route or server action)
 const videoUrl = await videoGenerationPipeline.generateMaiVideo(
   "Mai greeting a new visitor in the office lobby",
   0,
   {
-    runpod: process.env.NEXT_PUBLIC_RUNPOD_API_KEY!,
-    waltEndpoint: process.env.NEXT_PUBLIC_WALT_LORA_ENDPOINT_ID!,
-    maiLoraUrl: process.env.NEXT_PUBLIC_MAI_LORA_URL!,
+    runpod: process.env.RUNPOD_API_KEY!,
+    waltEndpoint: process.env.WALT_LORA_ENDPOINT_ID!,
+    maiLoraUrl: process.env.MAI_LORA_URL!,
   }
 )
 
-// Generate speech
+// Generate speech (in API route or server action)
 const audioUrl = await barkAPI.generateSpeech(
   "Hello! I'm Mai, David's AI assistant.",
-  process.env.NEXT_PUBLIC_BARK_ENDPOINT_ID!,
-  process.env.NEXT_PUBLIC_RUNPOD_API_KEY!
+  process.env.BARK_ENDPOINT_ID!,
+  process.env.RUNPOD_API_KEY!
 )
 */

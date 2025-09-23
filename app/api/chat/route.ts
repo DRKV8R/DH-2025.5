@@ -1,10 +1,11 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { geminiClient } from "@/lib/gemini-client"
+import { createGeminiClient } from "@/lib/gemini-client"
 
 export async function POST(request: NextRequest) {
   try {
     const { message, conversationHistory = [] } = await request.json()
 
+    const geminiClient = createGeminiClient()
     const response = await geminiClient.chatWithContext(message, conversationHistory)
 
     return NextResponse.json({ response })

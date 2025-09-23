@@ -14,6 +14,7 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [showMegaMessage, setShowMegaMessage] = useState(false)
+  const [userInteracted, setUserInteracted] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const abortControllerRef = useRef<AbortController | null>(null)
 
@@ -162,6 +163,21 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
 
   const handleVideoLoad = () => {
     console.log("[v0] Video loaded successfully")
+    if (videoRef.current && userInteracted) {
+      videoRef.current.play().catch((error) => {
+        console.log("[v0] Autoplay with sound failed:", error)
+      })
+    }
+  }
+
+  const handleVideoClick = () => {
+    if (videoRef.current && !userInteracted) {
+      setUserInteracted(true)
+      videoRef.current.muted = false
+      videoRef.current.play().catch((error) => {
+        console.log("[v0] Play with sound failed:", error)
+      })
+    }
   }
 
   if (isLoading) {
@@ -192,11 +208,19 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
 
   return (
     <div className="fixed inset-0 bg-black z-50">
+      {!userInteracted && (
+        <div
+          className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer"
+          onClick={handleVideoClick}
+        >
+          <div className="bg-black/50 text-white px-6 py-3 rounded-lg font-mono text-sm">Click to enable sound</div>
+        </div>
+      )}
       <video
         ref={videoRef}
         src={videoUrl}
         autoPlay
-        muted
+        muted={!userInteracted}
         playsInline
         onEnded={handleVideoEnd}
         onError={handleVideoError}

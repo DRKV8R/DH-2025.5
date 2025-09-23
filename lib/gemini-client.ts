@@ -1,14 +1,31 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
-import { supabase } from "./supabase-client"
+import { createServerClient } from "@supabase/ssr"
+import { cookies } from "next/headers"
 import { resumeContent } from "@/data/resume-content"
 
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!)
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
 
 export class GeminiRAGClient {
   private model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" })
+  private supabase
+
+  constructor() {
+    const cookieStore = cookies()
+    this.supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      {
+        cookies: {
+          get(name: string) {
+            return cookieStore.get(name)?.value
+          },
+        },
+      },
+    )
+  }
 
   async storeResumeContent() {
-    await supabase.from("messages").insert({
+    await this.supabase.from("messages").insert({
       role: "system",
       content: resumeContent,
       persona: "mai",
@@ -17,7 +34,7 @@ export class GeminiRAGClient {
   }
 
   async chatWithContext(userMessage: string, conversationHistory: any[] = []) {
-    const { data: contextData } = await supabase
+    const { data: contextData } = await this.supabase
       .from("messages")
       .select("content")
       .eq("persona", "mai")
@@ -45,4 +62,6 @@ export class GeminiRAGClient {
   }
 }
 
-export const geminiClient = new GeminiRAGClient()
+export function createGeminiClient() {
+  return new GeminiRAGClient()
+}
